@@ -16,7 +16,7 @@ body {
     /* crossAxisAlignment: CrossAxisAlignment.center */
     align-items: center;
     padding: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 nav {
@@ -26,7 +26,7 @@ nav {
     take over the entire remaining space */
     /* similar to the Expand() widget in flutter. */
     flex: 1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: right;
 }
 
@@ -37,7 +37,7 @@ nav ul {
 }
 
 nav ul li {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: inline-block;
     margin-right: 20px;
 }
@@ -56,7 +56,7 @@ p {
     max-width: 1300px;
     /* center it */
     margin: auto;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -118,7 +118,7 @@ p {
 
 .categories {
     margin: 70px 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .col-3 {
@@ -134,7 +134,7 @@ p {
 }
 
 .small-container {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     max-width: 1080px;
     /* center the element */
     margin: auto;
@@ -157,7 +157,7 @@ p {
 }
 
 .title {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: center;
     /* top: 0
     left & right: auto
