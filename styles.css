@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* the total width of an element involves
+    the padding and margin */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    /* default flex-direction: horizontal; */
+    display: flex;
+    /* crossAxisAlignment: CrossAxisAlignment.center */
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+nav {
+    /* the size of other elements will fit their
+    contents */
+    /* while the element with the flex: 1 property will 
+    take over the entire remaining space */
+    /* similar to the Expand() widget in flutter. */
+    flex: 1;
+    border: 1px solid red;
+    text-align: right;
+}
+
+nav ul {
+    /* inline level block container */
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    border: 1px solid green;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    /* at most 1300px */
+    max-width: 1300px;
+    /* center it */
+    margin: auto;
+    border: 1px solid green;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    /* crossAxisAlignment: CrossAxisAlignment.center */
+    align-items: center;
+    /* sets whether flex items are forced onto one line
+    or can wrap into multiple lines */
+    flex-wrap: wrap;
+    /* mainAxisAlignment: MainAxisAlignment.spaceAround */
+    justify-content: space-around;
+}
+
+.col-2 {
+    /* will occupy 50% of the flex space */
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    /* 100% of the available (50%) flex space. */
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+
+}
+
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+
+.btn:hover {
+    background: #563434;
+
+}
+
+.header {
+    /* color starts from the center in a radial form */
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+.header .row {
+    margin-top: 70px;
+}
+
+.categories {
+    margin: 70px 0;
+    border: 1px solid black;
+}
+
+.col-3 {
+    /* each image will occupy 30% of the available
+    flex space. */
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px; 
+}
+
+.col-3 img {
+    max-width: 100%;
+}
+
+.small-container {
+    border: 1px solid green;
+    max-width: 1080px;
+    /* center the element */
+    margin: auto;
+
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4 {
+    /* each col-4 wll occupy 25% of flex space. */
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img {
+    max-width: 100%;
+}
+
+.title {
+    border: 1px solid red;
+    text-align: center;
+    /* top: 0
+    left & right: auto
+    right: 80px */
+    margin: 0 auto 80px;
+    /* positioned based on its current
+    position. */
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title::after {
+    content: "";
+    /* background color */
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    /* this element is positioned based on the 
+    position of its nearest ancestor. */
+    position: absolute;    
+    bottom: 0;  
+    left: 50%;
+    /* repositions an element horizontally on the
+    2D plane. */
+    transform: translateX(-50%);
+}
+
+h4 {
+    color: #555;
+    /* not bold not light */
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 14px;
+}
+
+/* changing color of the icon */
+.rating .fa {
+    color: #ff523b;
+}
+
+.col-4:hover {
+    /* it will move by 5px upwards (y-axis) */
+    transform: translateY(-5px);
+}
+
+/* offer */
+
+.offer {
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+
+.col-2 .offer-img {
+    padding: 50px;
+}
+
+small {
+    color: #555;
+}
+
+/* testimonial section */
+.testimonial {
+    padding-top: 100px;
+}
+
+.testimonial .col-3 {
+    text-align: center;     
+    padding: 40px 20px;
+    /* x-offset, y-offset, blur-radius, spread-radius, color */
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial .col-3 img {
+    max-width: 50px;
+    margin-top:  20px;
+    /* make it into a circle.  */
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.fa.fa-quote-left {
+    font-size: 34px;
+    color: #ff523b;
+}
+
+.col-3 p {
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+
+.testimonial .col-3 h3 {
+    /* semi-bold */
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+/* brands */
+.brands {
+    margin: 100px auto;
+}
+
+.col-5 {
+    width: 160px;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);    
+    transition: filter 0.5s;
+}
+
+.col-5 img:hover {
+    filter: grayscale(0);
+}
+
+/* footer */
+.footer {
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.footer p {
+    color: #8a8a8a;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1 {
+    flex-basis: 30%;
+}
+
+.footer-col-2 {
+    /* use all the available space */
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.footer hr {
+    border: none;
+    height: 1px;
+    background: #b5b5b5;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+
+/* media query for menu   */
+
+@media only screen and (max-width: 800px) {
+    nav ul {
+        /* positioned relative to the nearest
+        positioned ancestor */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        /* prevents scrollbars from showing up. */
+        /* also serves to actually hide the content that doesn't
+        fit in the element's box */
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* media query for less 600 screen size */
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center; 
+    }
+
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
